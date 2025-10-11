@@ -1,12 +1,12 @@
 {
-  "name": "mcp-local",
+  "name": "tiangong-local-mcp-launcher",
   "version": "1.0.0",
-  "description": "",
+  "description": "A local runtime environment for running TianGong MCP (Model Context Protocol) servers using PM2",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["mcp", "tiangong", "launcher", "pm2", "model-context-protocol"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
