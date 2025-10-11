@@ -1,6 +1,6 @@
-# TianGong Local MCP Launcher
+# TianGong AI MCP Local Launcher
 
-A local runtime environment for launching and managing TianGong MCP (Model Context Protocol) servers using PM2.
+A local runtime environment for launching and managing TianGong AI MCP (Model Context Protocol) servers using PM2.
 
 ## Prerequisites
 
