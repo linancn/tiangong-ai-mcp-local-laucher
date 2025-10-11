@@ -12,6 +12,6 @@
   "type": "commonjs",
   "dependencies": {
     "@tiangong-ai/mcp-server-local": "^0.0.4",
-    "@tiangong-lca/mcp-server": "^0.0.21"
+    "@tiangong-lca/mcp-server": "^0.0.22"
   }
 }
