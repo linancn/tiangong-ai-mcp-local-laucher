@@ -12,6 +12,8 @@ npm install -g pm2
 
 ```bash
 npm install
+
+npm update && npm ci
 ```
 
 ## Usage
