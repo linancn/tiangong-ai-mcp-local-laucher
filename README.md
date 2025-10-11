@@ -29,7 +29,7 @@ pm2 start "npx --no-install @tiangong-ai/mcp-server-local tiangong-ai-mcp-http" 
   --error ./logs/tiangong-ai-mcp-error.log
 
 # Start TianGong LCA MCP server
-pm2 start "npx --no-install -p @tiangong-lca/mcp-server tiangong-lca-mcp-http" \
+pm2 start "npx --no-install -p @tiangong-lca/mcp-server tiangong-lca-mcp-http-local" \
   --name tiangong-lca-mcp-local \
   --time \
   --output ./logs/tiangong-lca-mcp-out.log \
