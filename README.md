@@ -22,11 +22,24 @@ npm update && npm ci
 
 ```bash
 # Start TianGong AI MCP server
-pm2 start "npx --no-install @tiangong-ai/mcp-server-local tiangong-ai-mcp-http" --name tiangong-ai-mcp-local --time
+pm2 start "npx --no-install @tiangong-ai/mcp-server-local tiangong-ai-mcp-http" \
+  --name tiangong-ai-mcp-local \
+  --time \
+  --output ./logs/tiangong-ai-mcp-out.log \
+  --error ./logs/tiangong-ai-mcp-error.log
 
 # Start TianGong LCA MCP server
-pm2 start "npx --no-install @tiangong-lca/mcp-server tiangong-lca-mcp-http-local" --name tiangong-lca-mcp-local --time
+pm2 start "npx --no-install -p @tiangong-lca/mcp-server tiangong-lca-mcp-http" \
+  --name tiangong-lca-mcp-local \
+  --time \
+  --output ./logs/tiangong-lca-mcp-out.log \
+  --error ./logs/tiangong-lca-mcp-error.log
 ```
+### View Status
+
+```bash
+pm2 status
+``` 
 
 ### View Logs
 
