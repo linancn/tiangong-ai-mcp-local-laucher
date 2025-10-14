@@ -34,6 +34,13 @@ pm2 start "npx --no-install -p @tiangong-lca/mcp-server tiangong-lca-mcp-http-lo
   --time \
   --output ./logs/tiangong-lca-mcp-out.log \
   --error ./logs/tiangong-lca-mcp-error.log
+
+# Optional: Start MCP Chart Server
+pm2 start "npx --no-install -p @antv/mcp-server-chart mcp-server-chart --transport streamable --host 0.0.0.0" \
+  --name mcp-server-chart \
+  --time \
+  --output ./logs/mcp-server-chart-out.log \
+  --error ./logs/mcp-server-chart-error.log
 ```
 ### View Status
 

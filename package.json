@@ -12,6 +12,7 @@
   "type": "commonjs",
   "dependencies": {
     "@tiangong-ai/mcp-server-local": "^0.0.4",
-    "@tiangong-lca/mcp-server": "^0.0.22"
+    "@tiangong-lca/mcp-server": "^0.0.22",
+    "@antv/mcp-server-chart": "^0.9.1"
   }
 }
