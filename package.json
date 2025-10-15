@@ -7,12 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["mcp", "tiangong", "launcher", "pm2", "model-context-protocol"],
-  "author": "",
+  "author": "Nan LI",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "@tiangong-ai/mcp-server-local": "^0.0.4",
-    "@tiangong-ai/vis-server": "^0.0.4",
+    "@tiangong-ai/vis-server": "^0.0.5",
     "@tiangong-lca/mcp-server": "^0.0.22",
     "@antv/mcp-server-chart": "^0.9.1"
   }

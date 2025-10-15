@@ -1,0 +1,52 @@
+{
+  "apps": [
+    {
+      "name": "tiangong-ai-mcp-local",
+      "script": "npx",
+      "args": "--no-install @tiangong-ai/mcp-server-local tiangong-ai-mcp-http",
+      "time": true,
+      "out_file": "./logs/tiangong-ai-mcp-out.log",
+      "error_file": "./logs/tiangong-ai-mcp-error.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z"
+    },
+    {
+      "name": "tiangong-lca-mcp-local",
+      "script": "npx",
+      "args": "--no-install -p @tiangong-lca/mcp-server tiangong-lca-mcp-http-local",
+      "time": true,
+      "out_file": "./logs/tiangong-lca-mcp-out.log",
+      "error_file": "./logs/tiangong-lca-mcp-error.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z"
+    },
+    {
+      "name": "mcp-server-chart-remote",
+      "script": "npx",
+      "args": "--no-install -p @antv/mcp-server-chart mcp-server-chart --transport streamable --port 1122 --host 0.0.0.0",
+      "time": true,
+      "out_file": "./logs/mcp-server-chart-remote-out.log",
+      "error_file": "./logs/mcp-server-chart-remote-error.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z"
+    },
+    {
+      "name": "tiangong-ai-vis-server",
+      "script": "npx",
+      "args": "--no-install @tiangong-ai/vis-server tiangong-ai-vis-private",
+      "time": true,
+      "out_file": "./logs/tiangong-ai-vis-server-out.log",
+      "error_file": "./logs/tiangong-ai-vis-server-error.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z"
+    },
+    {
+      "name": "mcp-server-chart-local",
+      "script": "npx",
+      "args": "--no-install -p @antv/mcp-server-chart mcp-server-chart --transport streamable --port 1123 --host 0.0.0.0",
+      "time": true,
+      "env": {
+        "VIS_REQUEST_SERVER": "http://localhost:3000/render"
+      },
+      "out_file": "./logs/mcp-server-chart-local-out.log",
+      "error_file": "./logs/mcp-server-chart-local-error.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z"
+    }
+  ]
+}
