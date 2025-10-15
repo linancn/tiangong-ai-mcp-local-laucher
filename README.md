@@ -35,12 +35,27 @@ pm2 start "npx --no-install -p @tiangong-lca/mcp-server tiangong-lca-mcp-http-lo
   --output ./logs/tiangong-lca-mcp-out.log \
   --error ./logs/tiangong-lca-mcp-error.log
 
-# Optional: Start MCP Chart Server
-pm2 start "npx --no-install -p @antv/mcp-server-chart mcp-server-chart --transport streamable --host 0.0.0.0" \
-  --name mcp-server-chart \
+# Start MCP Chart Server
+pm2 start "npx --no-install -p @antv/mcp-server-chart mcp-server-chart --transport streamable --port 1122 --host 0.0.0.0" \
+  --name mcp-server-chart-remote \
   --time \
-  --output ./logs/mcp-server-chart-out.log \
-  --error ./logs/mcp-server-chart-error.log
+  --output ./logs/mcp-server-chart-remote-out.log \
+  --error ./logs/mcp-server-chart-remote-error.log
+
+# Start VIS Server
+pm2 start "npx --no-install @tiangong-ai/vis-server tiangong-ai-vis-private" \
+  --name tiangong-ai-vis-server \
+  --time \
+  --output ./logs/tiangong-ai-vis-server-out.log \
+  --error ./logs/tiangong-ai-vis-server-error.log
+
+# Start MCP Chart Server
+pm2 start "npx --no-install -p @antv/mcp-server-chart mcp-server-chart --transport streamable --port 1123 --host 0.0.0.0" \
+  --name mcp-server-chart-local \
+  --time \
+  --env VIS_REQUEST_SERVER=http://localhost:3000 \
+  --output ./logs/mcp-server-chart-local-out.log \
+  --error ./logs/mcp-server-chart-local-error.log
 ```
 ### View Status
 
