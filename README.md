@@ -83,3 +83,9 @@ To start a MinIO server for local storage, use the following command:
 ```bash
 docker run -d -p 9000:9000 -p 9001:9001 quay.io/minio/minio server /data --console-address ":9001"
 ``` 
+
+### Default Credentials
+- Access Key
+  - MINIO_ROOT_USER: minioadmin
+- Secret Key
+  - MINIO_ROOT_PASSWORD: minioadmin
