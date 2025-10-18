@@ -76,3 +76,10 @@ pm2 logs tiangong-lca-mcp-local
 pm2 delete tiangong-ai-mcp-local
 pm2 delete tiangong-lca-mcp-local
 ```
+
+### MinIO Server
+To start a MinIO server for local storage, use the following command:
+
+```bash
+docker run -d -p 9000:9000 -p 9001:9001 quay.io/minio/minio server /data --console-address ":9001"
+``` 
